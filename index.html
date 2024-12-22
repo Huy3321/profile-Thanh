@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/imgs/inaya_pfp.gif">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Title -->
+    <title>Thanh Nguyen | Photo Editor</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twentytwenty/1.0.0/twentytwenty.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- TwentyTwenty JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twentytwenty/1.0.0/jquery.twentytwenty.min.js"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/beerslider/dist/BeerSlider.css">
+    <!-- BeerSlider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/beerslider/dist/BeerSlider.js"></script>
+
+
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">YourLogo</div>
+        <nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i> <!-- Biểu tượng hamburger từ Font Awesome -->
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            this.classList.toggle('active');  // Thêm hoặc xóa class 'active' cho hamburger
+            document.querySelector('nav ul').classList.toggle('active');  // Hiển thị/ẩn menu
+        });
+    </script>
+
+    <section class="main">
+        <h1><span>Thanh</span> <span>Nguyen</span></h1>
+        <h3 id="text"></h3>
+        <div class="social-icons">
+            <a href="https://github.com" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-instagram"></i></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const textElement = document.getElementById("text");
+            const text = "PHOTO EDITOR";
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < text.length) {
+                    textElement.textContent += text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, 150); // Tốc độ gõ (ms)
+                }
+            }
+
+            type(); // Bắt đầu gõ
+        });
+    </script>
+    <section id="about" class="about">
+        <div>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="info">
+                    <ul>
+                        <li><strong>Name:</strong> Nguyen Chi Thanh</li>
+                        <li><strong>Gender:</strong> Male</li>
+                        <li><strong>Birthday:</strong> 13th March 2002</li>
+                        <li><strong>Email:</strong> nguyenchithanh@gmail.com</li>
+                        <li><strong>Address:</strong> Hanoi, Vietnam</li>
+                        <li><strong>Hobbies:</strong> <i class="fas fa-music"></i> <i class="fas fa-film"></i>
+                            <i class="fas fa-book"></i> <i class="fas fa-gamepad"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Thay thế <div> bằng <span> cho đường phân cách dọc -->
+                <span class="divider"></span>
+
+                <div class="about-text">
+                    <p>My passion for photo editing started with a fascination for visual storytelling and a deep curiosity about how images can be transformed to convey powerful messages. This passion led me to pursue image manipulation and design, where I am dedicated to becoming a professional in the field. I am committed to continuous learning, always striving to improve my skills and techniques. Eager to work in diverse environments, I look forward to contributing fresh, creative solutions while maintaining a humble and open-minded approach. If you're seeking a dedicated and adaptable team member, I would be excited to bring my expertise to your organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="projects-title">Projects</h2>
+        <div id="slider">
+            <div class="beer-slider" data-beer-label="Before">
+                <img src="/assets/imgs/trươc.jpg" alt="Before Image">
+                <div class="beer-reveal" data-beer-label="After">
+                    <img src="/assets/imgs/sau.jpg" alt="After Image">
+                </div>
+            </div>
+
+            <div class="beer-slider" data-beer-label="Before">
+                <img src="/assets/imgs/sau 1.jpg" alt="Before Image 2">
+                <div class="beer-reveal" data-beer-label="After">
+                    <img src="/assets/imgs/trước 1.jpg" alt="After Image 2">
+                </div>
+            </div>
+
+            <div class="beer-slider" data-beer-label="Before">
+                <img src="/assets/imgs/trước 2.jpg" alt="Before Image 3">
+                <div class="beer-reveal" data-beer-label="After">
+                    <img src="/assets/imgs/sau 2.jpg" alt="After Image 3">
+                </div>
+            </div>
+
+            
+        </div>
+        <div id="slider">
+            <div class="beer-slider" data-beer-label="Before">
+                <img src="/assets/imgs/trước 6.jpg" alt="Before Image">
+                <div class="beer-reveal" data-beer-label="After">
+                    <img src="/assets/imgs/sau 6.jpg" alt="After Image">
+                </div>
+            </div>
+
+            <div class="beer-slider" data-beer-label="Before">
+                <img src="/assets/imgs/trước 4.jpg" alt="Before Image 2">
+                <div class="beer-reveal" data-beer-label="After">
+                    <img src="/assets/imgs/sau 4.jpg" alt="After Image 2">
+                </div>
+            </div>
+
+            <div class="beer-slider" data-beer-label="Before">
+                <img src="/assets/imgs/trước 3.jpg" alt="Before Image 3">
+                <div class="beer-reveal" data-beer-label="After">
+                    <img src="/assets/imgs/sau 3.jpg" alt="After Image 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize the BeerSlider plugin for each slider in the page
+            const sliders = document.querySelectorAll(".beer-slider");
+            sliders.forEach(slider => new BeerSlider(slider));
+        });
+    </script>
+
+
+    <section id="skills" class="skills">
+
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <!-- Frontend Section -->
+            <div class="skill-section">
+                <div class="section-header">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Graphics & Design</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <img src="/assets/imgs/photoshop logo.png" width="50" height="50" alt="JavaScript Icon">
+                        <p>Adobe Photoshop</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <img src="/assets/imgs/Frrr.png" width="50" height="50" alt="JavaScript Icon">
+                        <p>Adobe Fresco</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <img src="/assets/imgs/Lr.png" width="50" height="50" alt="JavaScript Icon">
+                        <p>Adobe Lightroom</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Soft Skills Section -->
+            <div class="soft-skills">
+                <div class="section-header">
+                    <i class="fas fa-users"></i>
+                    <h3>Soft Skills</h3>
+                </div>
+                <div class="soft-skills-container">
+                    <div class="skill-card">
+                        <h4>Problem Solving</h4>
+                        <p>Skilled in identifying root causes and breaking down complex problems into manageable parts
+                            to create innovative solutions.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Management</h4>
+                        <p>Experienced in managing projects, setting goals, and leading teams to successful outcomes.
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Teamwork</h4>
+                        <p>Skilled in collaborating effectively, supporting team members, and achieving common
+                            objectives through strong communication.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        function toggleDetails(element) {
+            // Tìm phần tử cha của timeline-header
+            const parent = element.parentElement;
+
+            // Toggle class 'active' để mở rộng/collapse
+            parent.classList.toggle('active');
+        }
+    </script>
+
+
+    <section id="experience" class="experience-section">
+        <h2 class="experience-title">EXPERIENCE</h2>
+        <div class="experience-container">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-header" onclick="toggleDetails(this)">
+                    <div class="large-text">Apr 2021 – Sep 2022</div>
+                    <div>
+                        <p class="medium-text">GENIEE INC.</p>
+                        <p class="small-text">Web Business Team Leader</p>
+                    </div>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="timeline-details">
+                    <p>- Managed a team of developers to deliver web solutions.</p>
+                    <p>- Optimized workflows and achieved a 30% increase in efficiency.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-header" onclick="toggleDetails(this)">
+                    <div class="large-text">Oct 2019 – Mar 2021</div>
+                    <div>
+                        <p class="medium-text">GENIEE INC.</p>
+                        <p class="small-text">Google Product Specialist</p>
+                    </div>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="timeline-details">
+                    <p>- Worked closely with Google teams to enhance product integration.</p>
+                    <p>- Provided consultation for clients on optimizing Google services.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-header" onclick="toggleDetails(this)">
+                    <div class="large-text">Aug 2017 – Sep 2019</div>
+                    <div>
+                        <p class="medium-text">GENIEE INC.</p>
+                        <p class="small-text">Media Consultant</p>
+                    </div>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="timeline-details">
+                    <p>- Provided strategies for media campaigns.</p>
+                    <p>- Increased client engagement through data-driven insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section id="contact" class="contact-section">
+        <h2 class="contact-title">Contact</h2>
+        <p class="contact-subtitle">Contact me, maybe</p>
+        <div class="contact-container">
+            <div class="contact-card">
+                <i class="fa-solid fa-envelope contact-icon" style="font-size: 24px; color: rgb(204, 0, 95);"></i>
+                <h3 class="contact-type">Email</h3>
+                <p class="contact-detail">nguyenquanghuymt1@gmail.com</p>
+            </div>
+            <div class="contact-card">
+                <i class="fa-solid fa-location-dot" style="font-size: 24px; color: rgb(204, 0, 95);"></i>
+                <h3 class="contact-type">Location</h3>
+                <p class="contact-detail">Hanoi, Vietnam</p>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-linkedin" style="font-size: 24px; color: rgb(204, 0, 95);"></i>
+                <h3 class="contact-type">LinkedIn</h3>
+                <p class="contact-detail">Huy Nguyen</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Thanh Nguyen</h2>
+            <p>Photo Editor</p>
+            <p>© All rights reserved. Template designed by Huy Nguyen.</p>
+            <div class="icons">
+                <a href="https://github.com" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
