@@ -9,17 +9,31 @@ body {
 
 html {
     scroll-behavior: smooth;
-    /* Thêm hiệu ứng cuộn mượt */
 }
 
 section {
     padding-top: 70px;
-    /* Thêm khoảng cách cho các phần để tránh bị che */
 }
+
+header .logo img {
+    max-width: 100%;    
+    height: auto;     
+    display: block;   
+    border-radius: 50%;  
+
+
+}
+
+header .logo {
+    width: 40px;       
+    height: 40px;      
+    overflow: hidden; 
+}
+
+
 
 :target {
     padding-top: 60px;
-    /* Thêm padding-top để tránh che khuất bởi header */
 }
 
 h1,
@@ -43,7 +57,6 @@ ul {
     margin: 0;
 }
 
-/* Header */
 header {
     background-color: #333;
     color: #fff;
@@ -79,23 +92,18 @@ header nav ul li a:hover {
     color: #00bcd4;
 }
 
-/* Hamburger Menu for Mobile */
+
 .hamburger {
     display: none;
     font-size: 24px;
     cursor: pointer;
     z-index: 1001;
-    /* Đảm bảo hamburger luôn nổi bật trên cùng */
     position: absolute;
     right: 10px;
-    /* Đảm bảo hamburger luôn ở bên phải */
     top: 15px;
-    /* Giữ hamburger không bị dính vào cạnh trên */
 }
 
 @media screen and (max-width: 768px) {
-
-    /* Header layout for small screens */
     header {
         display: block;
         flex-direction: row;
@@ -108,12 +116,10 @@ header nav ul li a:hover {
     .hamburger {
         display: block;
         right: 40px;
-        /* Đẩy hamburger sang phải */
     }
 
     header nav ul {
         display: none;
-        /* Ẩn menu điều hướng */
         flex-direction: column;
         width: 90%;
         background-color: #333;
@@ -121,14 +127,12 @@ header nav ul li a:hover {
         border-radius: 8px;
         position: absolute;
         top: 60px;
-        /* Đảm bảo menu không bị che khuất */
         right: -5px;
         z-index: 990;
     }
 
     header nav ul.active {
         display: flex;
-        /* Hiển thị menu khi active */
     }
 
     header nav ul li {
@@ -150,7 +154,6 @@ header nav ul li a:hover {
         height: 90vh;
         margin-top: 60px;
         padding: 10% 5%;
-        /* Tăng padding cho không gian thoáng hơn trên các màn hình nhỏ */
     }
 
     .main h1 {
@@ -169,7 +172,6 @@ header nav ul li a:hover {
         font-size: 20px;
     }
 
-    /* Điều chỉnh khoảng cách icon social */
     .social-icons {
         gap: 15px;
         bottom: 15px;
@@ -179,13 +181,10 @@ header nav ul li a:hover {
         margin-top: 30px;
     }
 
-    /* Section kỹ năng */
     .skill-section {
         flex: 1 1 250px;
-        /* Thu nhỏ chiều rộng */
     }
 
-    /* Thay đổi kích thước hình ảnh và font-size */
     .skill-item img {
         width: 40px;
         height: 40px;
@@ -197,53 +196,52 @@ header nav ul li a:hover {
 
     .soft-skills-container {
         display: flex;
-        flex-direction: column; /* Sắp xếp dọc các thẻ */
-        align-items: center; /* Căn giữa các thẻ */
-        gap: 20px; /* Khoảng cách giữa các thẻ */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; 
     }
 
     .skill-card {
-        width: 90%; /* Chiều rộng thẻ gần full màn hình */
-        max-width: 600px; /* Giới hạn chiều rộng tối đa */
-        padding: 20px; /* Thêm khoảng cách bên trong */
-        /* border-radius: 8px; Bo góc nhẹ để mềm mại */
-        background-color: #f9f9f9; /* Màu nền sáng */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng */
-        text-align: left; /* Văn bản căn trái */
+        width: 90%; 
+        max-width: 600px; 
+        padding: 20px; 
+        background-color: #f9f9f9; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left; 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: auto; /* Tự động chiều cao theo nội dung */
+        height: auto; 
     }
 
     .skill-card h4 {
-        text-align: center; /* Tiêu đề căn giữa */
+        text-align: center; 
         font-size: 1.2rem;
         margin-bottom: 10px;
-        color: #333; /* Màu chữ tiêu đề */
+        color: #333; 
     }
 
     .skill-card p {
-        text-align: justify; /* Căn đều hai bên cho đoạn văn */
-        line-height: 1.8; /* Khoảng cách dòng để dễ đọc */
-        color: #666; /* Màu chữ đoạn văn */
-        margin: 0; /* Loại bỏ khoảng cách mặc định */
+        text-align: justify;
+        line-height: 1.8; 
+        color: #666; 
+        margin: 0; 
     }
     .experience-container {
-        padding-left: 30px; /* Tiếp tục giảm padding */
+        padding-left: 30px; 
     }
 
     .experience-container::before {
-        left: 0px; /* Đưa thanh dọc sát hơn */
+        left: 0px; 
     }
 
     .timeline-item {
-        width: calc(100% - 40px); /* Chiếm gần toàn màn hình */
-        margin-left: 0px; /* Căn chỉnh thẻ */
+        width: calc(100% - 40px); 
+        margin-left: 0px;
     }
 
     .timeline-item::before {
-        left: 10px; /* Điều chỉnh dấu chấm */
+        left: 10px; 
     }
 
     .large-text {
@@ -260,8 +258,6 @@ header nav ul li a:hover {
 }
 
 @media screen and (max-width: 480px) {
-
-    /* Main section padding và font size cho các màn hình rất nhỏ */
     .main {
         padding: 20% 5%;
     }
@@ -285,7 +281,6 @@ header nav ul li a:hover {
     
 }
 
-/* Main Section */
 .main {
     text-align: center;
     padding: 5% 2%;
@@ -343,8 +338,6 @@ header nav ul li a:hover {
     color: #00bcd4;
 }
 
-
-/* About Section */
 .about {
     background-color: #f9f9f9;
     padding: 30px 30px;
@@ -353,7 +346,6 @@ header nav ul li a:hover {
 
 #about {
     scroll-margin-top: 80px;
-    /* Đảm bảo không bị che khuất bởi header */
 }
 
 .about h2 {
@@ -392,11 +384,9 @@ header nav ul li a:hover {
 
 .about-text p {
     line-height: 1.8;
+    margin: 0px 0;
 }
 
-
-
-/* Skills Section */
 #skills {
     padding: 30px 30px;
     background-color: #f9f9f9;
@@ -412,11 +402,10 @@ header nav ul li a:hover {
     font-weight: bold;
 }
 #skills h3 {
-    font-size: 16px; /* Điều chỉnh kích thước tùy theo nhu cầu */
-    font-weight: normal; /* Tùy chọn: làm cho chữ mỏng hơn nếu cần */
+    font-size: 16px; 
+    font-weight: normal; 
 }
 
-/* Kỹ năng chính và kỹ năng mềm */
 .skill-section, .soft-skills {
     margin-bottom: 40px;
 }
@@ -441,7 +430,6 @@ header nav ul li a:hover {
     font-weight: bold;
 }
 
-/* Kỹ năng chính */
 .skill-items {
     display: flex;
     flex-wrap: wrap;
@@ -476,7 +464,6 @@ header nav ul li a:hover {
     margin: 0;
 }
 
-/* Kỹ năng mềm */
 .soft-skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -487,7 +474,6 @@ header nav ul li a:hover {
 .skill-card {
     background-color: #ffffff;
     padding: 20px;
-    /* border-radius: 8px; */
     text-align: center;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -513,10 +499,7 @@ header nav ul li a:hover {
     text-align: justify;
     margin: 0;
 }
-/* Experience Section */
-/* CSS cho phần EXPERIENCE */
 
-/* Container & Timeline Item */
 #experience {
     padding: 30px 30px;
     background-color: #f9f9f9;
@@ -533,17 +516,15 @@ header nav ul li a:hover {
     display: inline-block;
 }
 
-/* Container & Timeline Item */
 .experience-container {
     position: relative;
-    margin: 0 auto; /* Căn giữa container */
+    margin: 0 auto; 
 }
 
 
 .timeline-item {
-    width: 80%; /* Thẻ chiếm hết chiều rộng container */
+    width: 80%; 
     background: #fff;
-    /* border-radius: 8px; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
@@ -551,12 +532,12 @@ header nav ul li a:hover {
     margin: 20px auto;
 }
 
-/* Dấu chấm nằm đúng trên thanh dọc */
+
 .timeline-item::before {
     content: '';
     position: absolute;
-    top: 20px; /* Đặt chấm giữa thẻ */
-    left: -47px; /* Căn chỉnh để chấm nằm trên thanh dọc */
+    top: 20px;
+    left: -47px;
     width: 15px;
     height: 15px;
     background: #c1007e;
@@ -565,7 +546,6 @@ header nav ul li a:hover {
     z-index: 1;
 }
 
-/* Header Styling */
 .timeline-header {
     display: flex;
     justify-content: space-between;
@@ -589,7 +569,6 @@ header nav ul li a:hover {
     transform: rotate(180deg);
 }
 
-/* Text Size Management */
 .large-text {
     font-size: 18px;
     font-weight: bold;
@@ -607,7 +586,6 @@ header nav ul li a:hover {
     color: #666;
 }
 
-/* Timeline Details */
 .timeline-details {
     max-height: 0;
     overflow: hidden;
@@ -615,13 +593,9 @@ header nav ul li a:hover {
 }
 
 .timeline-item.active .timeline-details {
-    max-height: 500px; /* Đủ lớn để vừa nội dung */
+    max-height: 500px; 
 }
 
-
-/* project */
-
-/* CSS cho phần PROJECTS */
 .projects-section {
     padding: 30px 30px;
     background-color: #f8f9fa;
@@ -643,11 +617,9 @@ header nav ul li a:hover {
     gap: 20px;
 }
 
-/* Individual Project Cards */
 .project-card {
     background-color: #ffffff;
     border: 1px solid #ddd;
-    /* border-radius: 10px; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
@@ -660,14 +632,12 @@ header nav ul li a:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Image */
 .project-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-/* Project Text */
 .project-type {
     font-size: 1.2rem;
     color: #333;
@@ -680,8 +650,6 @@ header nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-
-/* Contact Section */
 .contact-section {
     padding: 30px 30px;
     background-color: #f8f9fa;
@@ -692,9 +660,9 @@ header nav ul li a:hover {
     color: #c1007e;
     text-transform: uppercase;
     margin-bottom: 10px;
-    text-align: center; /* Đảm bảo căn giữa nếu cần */
-    border-bottom: 2px solid #c1007e; /* Gạch chân */
-    display: inline-block; /* Đảm bảo kích thước phù hợp với chữ */
+    text-align: center;
+    border-bottom: 2px solid #c1007e;
+    display: inline-block; 
 
 }
 
@@ -715,7 +683,6 @@ header nav ul li a:hover {
 .contact-card {
     background-color: #fff;
     padding: 20px;
-    /* border-radius: 8px; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 280px;
@@ -729,8 +696,7 @@ header nav ul li a:hover {
 }
 
 .contact-icon {
-    width: 50px;
-    height: 50px;
+
     margin-bottom: 15px;
 }
 
@@ -746,7 +712,6 @@ header nav ul li a:hover {
     margin: 0;
 }
 
-/* Footer */
 .footer {
     background-color: #333;
     color: #fff;
@@ -756,7 +721,7 @@ header nav ul li a:hover {
 
 .footer .icons a {
     margin: 0 10px;
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
     transition: color 0.3s;
 }
@@ -765,31 +730,28 @@ header nav ul li a:hover {
     color: #00bcd4;
 }
 
-
-/* ----------------------------- */
-
 #slider {
-    display: flex; /* Sử dụng flexbox để xếp các phần tử theo chiều ngang */
-    justify-content: center; /* Căn giữa các ảnh trong slider */
-    gap: 20px; /* Tạo khoảng cách giữa các phần tử */
-    overflow-x: auto; /* Cho phép cuộn ngang nếu ảnh vượt quá kích thước */
-    margin: 0 auto; /* Căn giữa slider trong trang */
-    max-width: 100%; /* Đảm bảo slider không vượt quá kích thước của container */
-    padding: 20px 0; /* Khoảng cách trên và dưới cho slider */
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    overflow-x: auto;
+    margin: 0 auto;
+    max-width: 100%; 
+    padding: 20px 0; 
 }
 
 .beer-slider {
-    flex-shrink: 0; /* Ngăn không cho phần tử bị thu nhỏ khi có quá nhiều ảnh */
-    width: calc(33.33% - 20px); /* Đặt chiều rộng cho mỗi phần tử là 1/3 của container và trừ khoảng cách */
-    height: 300px; /* Chiều cao cố định cho mỗi ảnh */
+    flex-shrink: 0;
+    width: calc(33.33% - 20px); 
+    height: 300px; 
     position: relative;
 }
 
 .beer-slider img {
-    width: 100%; /* Đảm bảo ảnh chiếm hết chiều rộng của phần tử chứa */
-    height: 100%; /* Đảm bảo ảnh chiếm hết chiều cao của phần tử chứa */
-    object-fit: cover; /* Giữ tỷ lệ ảnh và cắt xén nếu cần */
-    display: block; /* Loại bỏ khoảng trống dưới ảnh */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
 }
 
 
