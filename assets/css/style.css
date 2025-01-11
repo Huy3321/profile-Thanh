@@ -255,6 +255,36 @@ header nav ul li a:hover {
     .small-text {
         font-size: 11px;
     }
+
+    .projects-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Điều chỉnh các project cards cho màn hình nhỏ hơn */
+    .projects-container {
+        flex-direction: column; /* Chuyển các card về dạng cột */
+        align-items: center; /* Căn giữa */
+    }
+
+    .project-card {
+        width: 90%; /* Dùng 90% chiều rộng cho các card */
+        max-width: 400px; /* Giới hạn chiều rộng tối đa */
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các card */
+    }
+
+    .project-image {
+        height: 150px; /* Giảm chiều cao ảnh để tiết kiệm không gian */
+    }
+
+    .project-type {
+        font-size: 1rem; /* Giảm kích thước font cho tiêu đề */
+    }
+
+    .project-name {
+        font-size: 0.9rem; /* Giảm kích thước font cho tên dự án */
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -278,7 +308,32 @@ header nav ul li a:hover {
         font-size: 18px;
     }
 
-    
+    .projects-title {
+        font-size: 18px; /* Giảm font-size của tiêu đề */
+        margin-bottom: 15px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%; /* Dùng toàn bộ chiều rộng cho các card */
+        margin-bottom: 10px; /* Giảm khoảng cách giữa các card */
+    }
+
+    .project-image {
+        height: 120px; /* Giảm chiều cao ảnh */
+    }
+
+    .project-type {
+        font-size: 0.9rem; /* Giảm kích thước font */
+    }
+
+    .project-name {
+        font-size: 0.8rem; /* Giảm kích thước font */
+    }
 }
 
 .main {
@@ -381,7 +436,13 @@ header nav ul li a:hover {
     width: 120px;
     font-weight: bold;
 }
-
+.about-text ul {
+    list-style-type: disc; /* Gạch đầu dòng hình tròn */
+    padding-left: 20px; /* Tạo khoảng cách giữa gạch đầu dòng và nội dung */
+}
+.about-text ul li {
+    margin-bottom: 8px; /* Khoảng cách giữa các dòng */
+}
 .about-text p {
     line-height: 1.8;
     margin: 0px 0;
@@ -390,6 +451,7 @@ header nav ul li a:hover {
 #skills {
     padding: 30px 30px;
     background-color: #f9f9f9;
+    scroll-margin-top: 80px;
 }
 
 #skills h2 {
@@ -504,6 +566,7 @@ header nav ul li a:hover {
     padding: 30px 30px;
     background-color: #f9f9f9;
     color: #333;
+    scroll-margin-top: 80px;
 }
 
 .experience-title {
@@ -599,6 +662,7 @@ header nav ul li a:hover {
 .projects-section {
     padding: 30px 30px;
     background-color: #f8f9fa;
+    scroll-margin-top: 80px;
 }
 
 .projects-title {
@@ -608,6 +672,7 @@ header nav ul li a:hover {
     margin-bottom: 30px;
     border-bottom: 2px solid #c1007e;
     display: inline-block;
+
 }
 
 .projects-container {
@@ -653,6 +718,7 @@ header nav ul li a:hover {
 .contact-section {
     padding: 30px 30px;
     background-color: #f8f9fa;
+    scroll-margin-top: 80px;
 }
 
 .contact-title {
